@@ -25,13 +25,8 @@ app.use(methodOverride('_method'))
 // route setup
 app.use('/', homeRouter);
 app.use('/posts', postsRouter);
-<<<<<<< HEAD
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
-=======
-app.use('/signup',signupRouter);
-app.use('/signin',signinRouter);
->>>>>>> styling_for_post
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
