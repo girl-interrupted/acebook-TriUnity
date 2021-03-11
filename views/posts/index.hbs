@@ -1,18 +1,62 @@
-<h1>Timeline</h1>
-<div class="posts">
-  {{#each posts}}
-  <p>{{this.message}}</p>
-  <div><h5>{{this.date}}</h5></div>
-
-     <form method="post" action="/posts?_method=DELETE"> 
-     {{!-- enctype="application/x-www-form-urlencoded" --}}
-      {{!-- <input type="hidden" id="postId" name="_method" value="DELETE"> --}}
-      <input type="hidden" name="id" value="{{this._id}}">
-   <button type="submit">Delete</button></form>
-  {{/each}}
+<body style="background-color: black;">
+<div class="wrap">
+<nav> 
+  <div class ="logo"> ACEBOOK</div>
+<ul>
+  <li><a class="active" href ="#"> Go Live</a></li>
+  <li><a class="active" href ="#"> Friends</a></li>
+  <li><a class="active" href ="#"> Messages</a></li>
+</ul>
+</nav>
+ <div class="profile"> 
+    <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2NzA3MDU5MTEzMzM4MTQ4/marilyn_monroe_photo_alfred_eisenstaedt_pix_inc_the_life_picture_collection_getty_images_53376357_cropped.jpg" alt="Profile Image" class="profile__image">
+    <div class="profile__name">Marilyn M.</div>
+    <div class="profile__title">Model at Vogue</div>
+  <div class="profile__detail">
+    3M followers 
+    </div>
+      <div class="friend1"> 
+    <img src="https://thetwist03.files.wordpress.com/2013/06/danny-devito-glasses.jpg" alt="Profile Image" class="profile__image">
+    <div class="profile__name">Joe</div>
+    <div class="profile__title">Actor</div>
+    <div class="profile__detail">
+    6M followers 
+    </div>
+    </div>
+    <div class="friend2"> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOeEJ37iIJd1l_NbrW0XzZDmoBU2oKD4b1mw&usqp=CAU" alt="Profile Image" class="profile__image">
+    <div class="profile__name">Bit</div>
+    <div class="profile__title">cartoon</div>
+    <div class="profile__detail">
+      50M followers
+    </div>
+    </div>
+     <div class="friend3"> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrgpe_yvBbEDKLU68DM_cbCtQ6YY7BSAWTpg&usqp=CAU" alt="Profile Image" class="profile__image">
+    <div class="profile__name">Beyonce</div>
+    <div class="profile__title">Singer</div>
+    <div class="profile__detail">
+      50M followers
+    </div>
+    </div>
+  </div>
+</body>
+  <div class="container">
+    <div class="box">
+    <div class="posts">
+    {{#each posts}}
+    <p>{{this.message}}</p>
+    <div><h5>{{this.date}}</h5></div>
+      <form method="post" action="/posts?_method=DELETE"> 
+      {{!-- enctype="application/x-www-form-urlencoded" --}}
+        {{!-- <input type="hidden" id="postId" name="_method" value="DELETE"> --}}
+        <input type="hidden" name="id" value="{{this._id}}">
+    <button type="submit">Delete</button></form>
+    {{/each}}
+    </div>
+  </div>
   
 </div>
   
 <a class="new-post-link" href="/posts/new">New post</a>
-
 <a class="exit-link" href="/exit">Log Out</a>
