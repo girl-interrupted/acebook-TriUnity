@@ -21,7 +21,7 @@ padding: 1%;
   height: 900px;
   color: rgb(0, 0, 0);
   background: rgb(255, 255, 255);
-  diplay: flex;
+ /* display: flex;*/
   justify-content: center;
   align-items: center;
   margin: 20px 30px;
