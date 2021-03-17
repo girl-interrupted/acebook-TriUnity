@@ -71,7 +71,8 @@
     <p>{{this.message}} <span>
     <form method="post" action="/posts/like"> 
       <input type="hidden" name="id" value="{{this._id}}">
-  <button type="submit">{{this.likes}} Likes </button></form></span>
+ <i><button type="submit" class="bi bi-heart">{{this.likes}} Likes </button></form></span></div></i>
+
   </p><br>
   {{#each this.comments}}
   <p>{{this.user}}</p>
@@ -86,7 +87,7 @@
   <textarea name="comment" rows="2" cols="15" placeholder="Type Comment Here"></textarea><br>
   <input type="submit" value="Submit">
 </form>
-    {{/each}}
+  {{/each}}
   </div>
   </div>
  
