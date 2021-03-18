@@ -11,30 +11,37 @@
 
         <form id="login-form" method="POST" action="/login">
 <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
-<link rel='stylesheet' href='/stylesheets/style3.css' />
-<div class="row justify-content-md-center" style="margin-top: 100px">
-    <div class="col-md-6">
-<!--<body>-->
-<div class="box"> 
-    <div class"a">
-        <label for="chk1">Login</label>
-        <label for="chk1" id="sup">SIGN-UP</label>
-    <!--</div>-->
-    <div class="b">
-<form id="login-form" method="POST" action="/login" class="frm">
-        <h6 class="title">SIGN-UP FORM</h6>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input name="username" type="text" class="form-control" placeholder="Enter username" required>
-          <div class="form-group">
-                <label for="password">Password</label>
-                <input name="password" type="password" class="form-control" placeholder="Enter Password" required>
-            <button type="submit" >Login</button>
-            <lable for ="chk1" id="btm"></lable>
-        </form>
-        <div class="d"></div>
-        <div class="e"></div>
-      </div>
+<head> 
+    <link rel='stylesheet' href='/stylesheets/style3.css' />
+</head>
+<body>
+    <input type="radio" id="chk1" name="a1" style="display: none;">
+    <input type="radio" id="chk2" name="a1" style="display: none;">
+    <div class="box">
+          <div class="a">
+            <label for="chk1">Login</label>
+            <label for="chk2" id="sup">Sign up</label>
     </div>
-</div>
-<!--</body>-->
+    <div class="b">
+        <form id="login-form" method="POST" action="/login"  class="frm">
+            <h6 class="title">Lets be friends!</h6>
+            <input type="title" placeholder="Enter username" required>
+            <input type="title" placeholder="Enter password">
+            <input type="button" value="Sign up" id="btn">
+            <label for="chk1"  id="btm">Sign-up here</label>
+        </form>
+    </div>
+    <div class="c">
+        
+        <form action="" class="frm">
+            <h6 class="title">Welcome back friend!</h6>
+            <input type="title" placeholder="Enter username">
+            <input type="title" placeholder="Enter password">
+            <input type="button" value="login" id="btn" href="/signup">
+            <label for="chk2" id="btm">Login here</label>
+        </form>
+    </div>
+    <div class="d"></div>
+    <div class="e"></div>
+    </div>
+</body>
