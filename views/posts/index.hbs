@@ -75,23 +75,6 @@
         <h1>Post</h1>
       </center>
 
-<<<<<<< HEAD
-    {{#each posts}}
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH1EM7Q1OIWZ51GRyBz7hXFJYIpM7TgVHOCQ&usqp=CAU" width="10%" class="profilepic">
-    <div><h5>{{this.date}}</h5></div>
-  <p> {{this.user}} </p>
-    <p>{{this.message}} <span>
-    <form method="post" action="/posts/like"> 
-      <input type="hidden" name="id" value="{{this._id}}">
- <i><button type="submit" class="bi bi-heart">{{this.likes}} Likes </button></form></span></div></i>
-
-  </p><br>
-  {{#each this.comments}}
-  <p>{{this.user}}</p>
-  <p>{{this.comment}}</p>
-  {{/each}}
-      <form method="post" action="/posts?_method=DELETE"> 
-=======
       {{#each posts}}
       <img src="https://thetwist03.files.wordpress.com/2013/06/danny-devito-glasses.jpg" width="10%" class="profilepic">
       <div>
@@ -101,7 +84,7 @@
       <p>{{this.message}} <span>
           <form method="post" action="/posts/like">
             <input type="hidden" name="id" value="{{this._id}}">
-            <button type="submit">{{this.likes}} Likes </button>
+            <button type="submit" class="btn">{{this.likes}}  <i class="fa fa-heart"></i></button>
           </form>
         </span>
       </p><br>
@@ -110,22 +93,10 @@
       <p>{{this.comment}}</p>
       {{/each}}
       <form method="post" action="/posts?_method=DELETE">
->>>>>>> 35e742b (indentations fixed)
         <input type="hidden" name="id" value="{{this._id}}">
-        <button type="submit" class="btn btn-outline-danger">Delete</button>
+        <button type="submit" class="btn"><i class="fa fa-trash"></i></button>
       </form>
 
-<<<<<<< HEAD
-    <form id="comment-box" action="/posts/comment" method="post">
-  <input type="hidden" name="id" value="{{this._id}}">
-  <textarea name="comment" rows="2" cols="15" placeholder="Type Comment Here"></textarea><br>
-  <input type="submit" value="Submit">
-</form>
-  {{/each}}
-  </div>
-  </div>
- 
-=======
       <form id="comment-box" action="/posts/comment" method="post">
         <input type="hidden" name="id" value="{{this._id}}">
         <textarea name="comment" rows="2" cols="15" placeholder="Type Comment Here"></textarea><br>
@@ -134,4 +105,3 @@
       {{/each}}
     </div>
   </div>
->>>>>>> 35e742b (indentations fixed)
