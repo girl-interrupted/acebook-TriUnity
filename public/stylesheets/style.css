@@ -162,3 +162,16 @@ nav ul li a:hover{
   background: rgba(233, 17, 204, 0.7);
   border-radius: 6px;
 }
+.head{
+  border-style: solid;
+  border-color: rgb(214, 11, 204);
+  width: 100%;
+}
+.date{
+  text-align: center;
+}
+.h1{
+  font-size: 200%;
+  position: relative;
+  left: 10%;
+}
