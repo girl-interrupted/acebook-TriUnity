@@ -1,9 +1,9 @@
 .box1 {
-  width: 300px;
+  width: 400px;
   margin: 50px auto;
   border: 4px solid #00bfb6;
   border-radius: 15px;
-  padding: 5px;
+  padding: 15px;
   text-align: center;
   font-weight: 900;
   color: #00bfb6;
@@ -65,4 +65,5 @@
   font-weight: 900;
   color: #00bfb6;
   font-family: Arial;
+  text-decoration: none;
 }
