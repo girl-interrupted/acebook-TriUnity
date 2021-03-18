@@ -1,16 +1,10 @@
-
-
-<div class="row justify-content-md-center" style="margin-top: 100px">
-    <div class="col-md-6">
-
-        {{#if message}}
+<!--<div class="row justify-content-md-center" style="margin-top: 100px">
+    <div class="col-md-6">-->
+      {{#if message}}
             <div class="alert {{messageClass}}" role="alert">
                 {{message}}
             </div>
         {{/if}}
-
-        <form id="login-form" method="POST" action="/login">
-<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
 <head> 
     <link rel='stylesheet' href='/stylesheets/style3.css' />
 </head>
@@ -24,22 +18,23 @@
             <label for="chk2" id="sup">Sign up</label>
     </div>
     <div class="b">
-        <form id="login-form" method="POST" action="/login"  class="frm">
+        <form id="signup-form" method="POST" action="/signup"  class="frm">
             <h6 class="title">Lets be friends!</h6>
-            <input type="title" placeholder="Enter username" required>
-            <input type="title" placeholder="Enter password" required>
-            <input type="button" value="Sign up" id="btn">
-            <label for="chk1"  id="btm">Sign-up here</label>
+            <input type="text" placeholder="Enter username" name="username" required>
+            <input type="password" placeholder="Enter password" name="password" required>
+            <input type="submit" value="Sign up" id="btn" >
+            <label for="chk1"  id="btm">Sign up</label> <!--signup form-->
         </form>
+        <br><h6 class="mes">password min of 4 chr</h6><br>
     </div>
     <div class="c">
         
-        <form action="" class="frm">
+        <form action="/login" method="POST" class="frm">
             <h6 class="title">Welcome back friend!</h6>
-            <input type="title" placeholder="Enter username">
-            <input type="title" placeholder="Enter password">
-            <input type="button" value="login" id="btn" href="/signup">
-            <label for="chk2" id="btm">Login here</label>
+            <input type="text" placeholder="Enter username" name="username" required>
+            <input type="password" placeholder="Enter password" name="password" required>
+            <input type="submit" value="login" id="btn" >
+            <label for="chk2" id="btm">Login</label>
         </form>
     </div>
     <div class="d"></div>

@@ -16,7 +16,7 @@ body{
 .box{
     position: absolute;
     width: 350px;
-    height: 500px;
+    height: 100px;
     background: none;
     left: calc(50% - 175px);
     /*top: calc(50% - 250px);*/
@@ -112,3 +112,11 @@ body{
 }
 #chk1:checked ~ .box{transform:  rotateY(-180deg);}
 #chk2:checked ~ .box{transform:  rotateY(-90deg);}
+
+.mes{
+    position: relative;
+    top: 10%;
+    left: 28%;
+    color: purple;
+   
+}
