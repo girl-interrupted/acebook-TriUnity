@@ -1,12 +1,17 @@
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel='stylesheet' href='/stylesheets/style4.css' />
+<style> form {display: inline} </style>
 </head>
 
 <body style="background-color: rgb(255, 255, 255);">
   <div class="wrap">
     <nav>
       <div class="logo"> ACEBOOK</div>
+      <div class="logoutbtn">
+  <a class="exit-link p2" href="/exit"><i class="fa fa-sign-out"></i><span>Sign Out</span></a>
+  </div>
       <ul>
         <!-- <li><a class="active" href ="#"> Go Live</a></li>
   <li><a class="active" href ="#"> Friends</a></li>
@@ -65,9 +70,7 @@
 <div class="postbtn">
   <a class="new-post-link" href="/posts/new">New post</a>
 </div>
-<div class="logoutbtn">
-  <a class="exit-link" href="/exit">Log Out</a>
-</div>
+
 <div class="container">
   <div class="box">
     <div class="posts">
@@ -80,28 +83,49 @@
       <div class="date">
         <h5>{{this.date}}</h5>
       </div>
-      <p> {{this.user}} </p>
+      <!--<p> {{this.user}} </p>-->
       <p class="date">{{this.message}} <span>
           <form method="post" action="/posts/like">
+      <img src="" width="10%" class="profilepic">
+      <div>
+      </div>
+      <p class="p2">   {{this.user}} </p>
+      <div class="box1 sb7">
+        {{this.date}}<br>
+        {{this.message}}<br>
+                 <form method="post" action="/posts/like">
             <input type="hidden" name="id" value="{{this._id}}">
             <button type="submit" class="btn">{{this.likes}}  <i class="fa fa-heart"></i></button>
           </form>
-        </span>
-      </p><br>
-      {{#each this.comments}}
-      <p>{{this.user}}</p>
-      <p>{{this.comment}}</p>
-      {{/each}}
-      <form method="post" action="/posts?_method=DELETE">
+          <form method="post" action="/posts?_method=DELETE">
         <input type="hidden" name="id" value="{{this._id}}">
         <button type="submit" class="btn"><i class="fa fa-trash"></i></button>
-      </form>
-
-      <form id="comment-box" action="/posts/comment" method="post">
+      </form></div>
+             
+       
+      {{#each this.comments}}
+      <div class= "box3 sb1"> 
+      <p>{{this.user}}</p>
+      <p>{{this.comment}}</p>
+       </div>
+      {{/each}}
+      
+      <div class="box2">
+        <div class="mb-3">
+          <form id="comment-box" action="/posts/comment" method="post">          
+          <input type="hidden" name="id" value="{{this._id}}">
+  <label for="commentbox" class="form-label"></label>
+  <textarea class="form-control" placeholder="comment" rows="2" name="comment"></textarea>
+  <input type="submit" class="btn" value="Submit"><i class="fa fa-envelope"></i>
+  </form>
+</div>
+</div>
+      {{!-- <form id="comment-box" action="/posts/comment" method="post">
         <input type="hidden" name="id" value="{{this._id}}">
         <textarea name="comment" rows="2" cols="15" placeholder="Type Comment Here"></textarea><br>
-        <input type="submit" value="Submit">
-      </form>
+        <input type="submit" class="btn" value="Submit"><i class="fa fa-envelope"></i>
+      </form></div> --}}
       {{/each}}
+      
     </div>
   </div>
