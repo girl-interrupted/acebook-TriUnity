@@ -22,7 +22,6 @@ var SignupController = {
       var user = new User( {username: req.body.username, password: hash});
 
       user.save(function(err) {
-<<<<<<< HEAD
         if (err) {
           let error = err.errors
           res.render('signup/index', {
@@ -38,14 +37,3 @@ var SignupController = {
     }
   module.exports = SignupController;
 
-=======
-        if (err) {res.status(400).send('This username is already taken')
-        } else {
-        res.status(201).redirect('/login');
-      }
-      });
-      });
-    },
-}
-  module.exports = SignupController;
->>>>>>> de5d5c4faf718148a900da2fbf0e0d0211d09814

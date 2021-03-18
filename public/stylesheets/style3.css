@@ -16,11 +16,7 @@ body{
 .box{
     position: absolute;
     width: 350px;
-<<<<<<< HEAD
     height: 100px;
-=======
-    height: 500px;
->>>>>>> de5d5c4faf718148a900da2fbf0e0d0211d09814
     background: none;
     left: calc(50% - 175px);
     /*top: calc(50% - 250px);*/
@@ -115,7 +111,6 @@ body{
     width: 100%;
 }
 #chk1:checked ~ .box{transform:  rotateY(-180deg);}
-<<<<<<< HEAD
 #chk2:checked ~ .box{transform:  rotateY(-90deg);}
 
 .mes{
@@ -125,6 +120,3 @@ body{
     color: purple;
    
 }
-=======
-#chk2:checked ~ .box{transform:  rotateY(-90deg);}
->>>>>>> de5d5c4faf718148a900da2fbf0e0d0211d09814
