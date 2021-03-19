@@ -4,12 +4,12 @@
     <div class="col-md-6">
 
         {{#if message}}
-            <div class="alert {{messageClass}}" role="alert">
-                {{message}}
-            </div>
+        <div class="alert {{messageClass}}" role="alert">
+            {{message}}
+        </div>
         {{/if}}
 
-       <form id="sign-up-form" action="/signup" method="post">
+        <form id="sign-up-form" action="/signup" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input name="username" type="text" class="form-control" placeholder="Enter username" required>

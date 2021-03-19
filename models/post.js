@@ -1,16 +1,14 @@
-var mongoose = require('mongoose');
-
+var mongoose = require("mongoose");
 
 var PostSchema = new mongoose.Schema({
   message: String,
   date: String,
-  created_at: {type: Date, default: Date.now},
-  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}],
+  created_at: { type: Date, default: Date.now },
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
   likes: Number,
-  user: String 
+  user: String,
 });
 
-
-var Post = mongoose.model('Post', PostSchema);
+var Post = mongoose.model("Post", PostSchema);
 
 module.exports = Post;
