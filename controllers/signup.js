@@ -11,7 +11,7 @@ var SignupController = {
   Create: function (req, res) {
     let pword = req.body.password;
     if (pword.length < 4) {
-      res.render("signup/index", {
+      res.render("login/index", {
         message: "Password needs to be at least 4 characters",
         messageClass: "alert-danger",
       });
@@ -22,7 +22,7 @@ var SignupController = {
         user.save(function (err) {
           if (err) {
             let error = err.errors;
-            res.render("signup/index", {
+            res.render("login/index", {
               message: error.username.properties.message,
               messageClass: "alert-danger",
             });
