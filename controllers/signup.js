@@ -21,7 +21,7 @@ var SignupController = {
 
         user.save(function (err) {
           if (err) {
-            let error = err.errors;
+            let error = err.errors
             res.render("login/index", {
               message: error.username.properties.message,
               messageClass: "alert-danger",
