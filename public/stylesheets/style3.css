@@ -22,7 +22,7 @@ body{
     /*top: calc(50% - 250px);*/
     top: 50%;
     transform-style: preserve-3d;
-    transform: rotateY(-130deg);
+    /*transform: rotateY(-130deg);*/
 }
 .box div{
     width: 350px;
@@ -109,6 +109,7 @@ body{
     color: #720058;
     text-align: center;
     width: 100%;
+    cursor: pointer;
 }
 #chk1:checked ~ .box{transform:  rotateY(-180deg);}
 #chk2:checked ~ .box{transform:  rotateY(-90deg);}
