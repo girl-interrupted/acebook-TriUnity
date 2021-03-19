@@ -71,6 +71,8 @@ padding: 1%;
   position: absolute;
   left: 25%;
   top: 10%;
+  width: 40%;
+  height: 43%;
   font-family: sans-serif;
   text-align: center;
   color: rgb(226, 21, 199);
@@ -83,6 +85,8 @@ padding: 1%;
   position: absolute;
   left: 40%;
   top: 10%;
+  width: 40%;
+  height: 43%;
   font-family: sans-serif;
   text-align: center;
   color: rgb(226, 21, 199);
@@ -94,6 +98,8 @@ padding: 1%;
   position: absolute;
   left: 60%;
   top: 10%;
+  width: 40%;
+  height: 43%;
   font-family: sans-serif;
   text-align: center;
   color: rgb(226, 21, 199);
@@ -105,17 +111,21 @@ padding: 1%;
   position: absolute;
   left: 20%;
   top: 10%;
+  width: 40%;
+  height: 43%;
   font-family: sans-serif;
   text-align: center;
   color: rgb(226, 21, 199);
   max-width: 200px;
-  box-shadow: 0 0 10px  rgba(233, 229, 230, 0.555);
+  box-shadow: 0 0 10px  rgba(162, 0, 255, 0.555);
   padding: 20px;
 }
 .friend5{
   position: absolute;
   left: 80%;
   top: 10%;
+  width: 40%;
+  height: 43%;
   font-family: sans-serif;
   text-align: center;
   color: rgb(226, 21, 199);
@@ -161,4 +171,23 @@ nav ul li a{
 nav ul li a:hover{
   background: rgba(233, 17, 204, 0.7);
   border-radius: 6px;
+}
+.head{
+  border-style: solid;
+  border-color: rgb(214, 11, 204);
+  width: 100%;
+}
+.date{
+  text-align: center;
+}
+.h1{
+  font-size: 200%;
+  position: relative;
+  left: 10%;
+  color: white;
+  font-weight: 100;
+}
+.p2{
+  border: solid;
+  color: rgb(0, 0, 0);/* color does not work*/
 }

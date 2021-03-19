@@ -9,6 +9,9 @@
   color: #00bfb6;
   font-family: arial;
   position: relative;
+  right: 15%;
+  bottom: 40px;
+  font-size: 20px;
 }
 
 .sb7:before {
