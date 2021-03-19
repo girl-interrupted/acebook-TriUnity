@@ -68,21 +68,30 @@ var PostsController = {
     });
   },
   Delete: function (req, res) {
-    Comment.deleteMany({
-      post_id: mongoose.Types.ObjectId(req.body.id),
-    }).exec();
-    Post.findOneAndDelete(
-      {
-        _id: mongoose.Types.ObjectId(req.body.id),
-      },
-      function (err) {
-        if (err) {
-          throw err;
-        }
-        res.status(201).redirect("/posts");
-      }
-    );
-  },
-};
+     
+  Comment.deleteMany({
+    post_id: mongoose.Types.ObjectId(req.body.id),
+  }).exec();
+  Post.findOne(
+    {
+      _id: mongoose.Types.ObjectId(req.body.id),
+    }).exec(function (err, post) {
+      if (err) {
+        throw err;
+      } else if(post.user === req.session.user.username) { 
+        Post.findByIdAndRemove({
+          _id: mongoose.Types.ObjectId(req.body.id),
+        });
+      res.status(201).redirect("/posts");
+      } else {
+        console.log(post.user)
+        console.log(post.user)
+        console.log(req.session.user.username)
+  console.log("rendering posts again")
+  res.redirect('/posts');
+ }
+});
+},
+}
 
 module.exports = PostsController;
