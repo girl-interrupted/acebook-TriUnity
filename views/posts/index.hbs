@@ -3,21 +3,18 @@
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 <link rel='stylesheet' href='/stylesheets/style4.css' />
 <style> form {display: inline} </style>
+
 </head>
 
 <body style="background-color: rgb(255, 255, 255);">
+  <nav>
+  {{!-- <div class ="logo"> ACEBOOK</div> --}}
+<ul>
+  <li><a class="exit-link p2" href="/exit"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+</ul>
+  </nav>
+    </div>
   <div class="wrap">
-    <nav>
-      <div class="logo"> ACEBOOK</div>
-      <div class="logoutbtn">
- <!-- <a class="exit-link p2" href="/exit"><i class="fa fa-sign-out"></i> Sign Out</a>-->
-  </div>
-      <ul>
-        <!-- <li><a class="active" href ="#"> Go Live</a></li>
-  <li><a class="active" href ="#"> Friends</a></li>
-  <li><a class="active" href ="#"> Messages</a></li> -->
-      </ul>
-    </nav>
     <div class="profile">
       <img
         src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2NzA3MDU5MTEzMzM4MTQ4/marilyn_monroe_photo_alfred_eisenstaedt_pix_inc_the_life_picture_collection_getty_images_53376357_cropped.jpg"
@@ -70,12 +67,12 @@
 <div class="container">
   <div class="box">
     <div class="posts">
-        <a class="exit-link p2" href="/exit"><i class="fa fa-sign-out"></i> Sign Out</a>
+        {{!-- <a class="exit-link p2" href="/exit"><i class="fa fa-sign-out"></i> Sign Out</a> --}}
         <div class="postbtn">
             <a class="new-post-link p2" href="/posts/new">Share something with others <i class="fa fa-pencil"></i></a>
         </div>
       <center>
-        <h2 class="p2">Timeline</h2>
+        <h2 class="p2 timeline">Timeline</h2>
       </center>
       
 
@@ -96,11 +93,11 @@
         {{this.message}}<br>
                  <form method="post" action="/posts/like">
             <input type="hidden" name="id" value="{{this._id}}">
-            <button type="submit" class="btn">{{this.likes}}  <i class="fa fa-heart"></i></button>
+            <button type="submit" class="btn icons-post">{{this.likes}}  <i class="fa fa-heart fa-lg"></i></button>
           </form>
           <form method="post" action="/posts?_method=DELETE">
         <input type="hidden" name="id" value="{{this._id}}">
-        <button type="submit" class="btn"><i class="fa fa-trash"></i></button>
+        <button type="submit" class="btn button-color"><i class="fa fa-trash fa-lg"></i></button>
       </form></div>
              
        
@@ -117,7 +114,7 @@
           <input type="hidden" name="id" value="{{this._id}}">
   <label for="commentbox" class="form-label"></label>
   <textarea class="form-control" placeholder="comment" rows="2" name="comment"></textarea>
-  <input type="submit" class="btn" value="Submit"><i class="fa fa-envelope"></i>
+  <button type="submit" class="btn button-color"><i class="fa fa-envelope fa-lg"></i></button>
   </form>
 </div>
 </div>

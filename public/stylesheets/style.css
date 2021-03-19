@@ -1,6 +1,6 @@
 .logo{
   color: rgb(0, 0, 0);
-  position: relative;
+  /* position: relative; */
 left: 5%;
 font-size: 30px;
 font-weight: 0;
@@ -10,7 +10,8 @@ padding: 1%;
 .container{
   position: relative;
   display: flex;
-  justtify-content: center;
+  justify-content: center;
+  bottom: 10%;
   align-items: center;
   padding: 30px;
   flex-wrap: wrap;
@@ -20,7 +21,7 @@ padding: 1%;
   width: 100%;
   height: 900px;
   color: rgb(0, 0, 0);
-  background: rgb(255, 255, 255);
+  background: transparent;
  /* display: flex;*/
   justify-content: center;
   align-items: center;
@@ -161,7 +162,7 @@ nav ul {
   display: flex ;
 }
 nav ul li a{
-  line-height: 20px;
+  line-height: 10px;
   color: #fff;
   padding: 12px 30px;
   text-decoration: none;
@@ -187,7 +188,9 @@ nav ul li a:hover{
   color: white;
   font-weight: 100;
 }
-.p2{
+ /* .p2{
   border: solid;
-  color: rgb(0, 0, 0);/* color does not work*/
-}
+  color: rgb(0, 0, 0);
+ } */
+
+
